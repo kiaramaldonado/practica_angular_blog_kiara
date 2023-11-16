@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from 'src/app/interfaces/post.model';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-home',
@@ -13,9 +15,22 @@ export class HomeComponent implements OnInit {
     'https://images.pexels.com/photos/2925322/pexels-photo-2925322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   ];
 
+  cameraPosts: Post[] = [];
+  lensPosts: Post[] = [];
+  photographyPosts: Post[] = [];
+  filmmakingPosts: Post[] = [];
   currentImageIndex = 0;
 
-  ngOnInit() {
+  constructor(private postService: PostService) { }
+
+  ngOnInit(): void {
+    // Fetch the last three posts for each category
+    this.cameraPosts = this.postService.getRecentPostsByCategory('cameras');
+    this.lensPosts = this.postService.getRecentPostsByCategory('lenses');
+    this.photographyPosts = this.postService.getRecentPostsByCategory('photography');
+    this.filmmakingPosts = this.postService.getRecentPostsByCategory('filmmaking');
+
+    // Set interval to change background image every 3 seconds
     setInterval(() => {
       this.changeBackgroundImage();
     }, 3000);

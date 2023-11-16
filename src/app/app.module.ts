@@ -9,6 +9,7 @@ import { CamerasComponent } from './components/cameras/cameras.component';
 import { LensesComponent } from './components/lenses/lenses.component';
 import { PhotographyComponent } from './components/photography/photography.component';
 import { FilmmakingComponent } from './components/filmmaking/filmmaking.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FilmmakingComponent } from './components/filmmaking/filmmaking.componen
     CamerasComponent,
     LensesComponent,
     PhotographyComponent,
-    FilmmakingComponent
+    FilmmakingComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
