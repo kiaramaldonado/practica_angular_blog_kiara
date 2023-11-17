@@ -23,7 +23,7 @@
     margin-bottom: 30px;
 }
 
-.btn {
+.btn-primary {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1em;
@@ -32,8 +32,49 @@
     background-color: #333;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    border: 0;
 }
 
-.btn:hover {
+.btn-primary:hover {
     background-color: #555;
+}
+
+/* ---------- CATEGORIES ---------- */
+
+body {
+    background-color: #333;
+}
+
+.col-md-12 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.d-none {
+    display: none !important;
+    opacity: 0;
+    height: 0;
+    transition: opacity 1s ease-out, height 1s ease-out;
+}
+
+.col-md-4:not(.d-none) {
+    opacity: 1;
+    height: auto;
+}
+
+.col-md-12 h2:hover {
+    cursor: pointer;
+    color: rgb(255, 208, 0);
+}
+
+/* ---------- POST CARDS ---------- */
+
+.card {
+    border: 0;
 }

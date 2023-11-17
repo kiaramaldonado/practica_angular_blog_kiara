@@ -21,6 +21,12 @@ export class HomeComponent implements OnInit {
   filmmakingPosts: Post[] = [];
   currentImageIndex = 0;
 
+  showCameraPosts: boolean = true;
+  showLensPosts: boolean = true;
+  showPhotographyPosts: boolean = true;
+  showFilmmakingPosts: boolean = true;
+
+
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {

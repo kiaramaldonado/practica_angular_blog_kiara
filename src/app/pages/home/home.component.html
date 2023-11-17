@@ -1,0 +1,74 @@
+<body>
+    <section class="hero" [style.backgroundImage]="'url(' + backgroundImages[currentImageIndex] + ')'">
+        <div class="hero-content">
+            <h1>Welcome to FLASHCL!CK</h1>
+            <p>Your go-to source for photography and filmmaking inspiration</p>
+            <a routerLink="/cameras" class=" btn btn-primary">Explore Cameras</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <!-- Cameras Category -->
+            <div class="col-md-12">
+                <h2 (click)="showCameraPosts = !showCameraPosts">▼ CAMERAS ▼</h2>
+            </div>
+            <div class="col-md-4" *ngFor="let post of cameraPosts" [ngClass]="{ 'd-none': !showCameraPosts }">
+                <div class="card mb-3 d-flex flex-column">
+                    <img [src]="post.thumbnail" class="card-img-top flex-grow-1" alt="{{ post.title }}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
+                        <a [routerLink]="['/cameras', post.id]" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lenses Category -->
+            <div class="col-md-12">
+                <h2 (click)="showLensPosts = !showLensPosts">▼ LENSES ▼</h2>
+            </div>
+            <div class="col-md-4" *ngFor="let post of lensPosts" [ngClass]="{ 'd-none': !showLensPosts }">
+                <div class="card mb-3 d-flex flex-column">
+                    <img [src]="post.thumbnail" class="card-img-top flex-grow-1" alt="{{ post.title }}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
+                        <a [routerLink]="['/lenses', post.id]" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photography Category -->
+            <div class="col-md-12">
+                <h2 (click)="showPhotographyPosts = !showPhotographyPosts">▼ PHOTOGRAPHY ▼</h2>
+            </div>
+            <div class="col-md-4" *ngFor="let post of photographyPosts" [ngClass]="{ 'd-none': !showPhotographyPosts }">
+                <div class="card mb-3 d-flex flex-column">
+                    <img [src]="post.thumbnail" class="card-img-top flex-grow-1" alt="{{ post.title }}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
+                        <a [routerLink]="['/photography', post.id]" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filmmaking Category -->
+            <div class="col-md-12">
+                <h2 (click)="showFilmmakingPosts = !showFilmmakingPosts">▼ FILMMAKING ▼</h2>
+            </div>
+            <div class="col-md-4" *ngFor="let post of filmmakingPosts" [ngClass]="{ 'd-none': !showFilmmakingPosts }">
+                <div class="card mb-3 d-flex flex-column">
+                    <img [src]="post.thumbnail" class="card-img-top flex-grow-1" alt="{{ post.title }}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
+                        <a [routerLink]="['/filmmaking', post.id]" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
