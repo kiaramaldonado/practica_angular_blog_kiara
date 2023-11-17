@@ -1,1 +1,28 @@
-<p>cameras works!</p>
+<body>
+    <section class="hero"
+        style="background-image: url('https://premiersdesignawards.vic.gov.au/__data/assets/image/0006/614193/BM-Pocket-banner.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>CAMERAS</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <!-- Itera sobre los posts de la categoría de cámaras -->
+            <div class="col-md-4" *ngFor="let post of cameraPosts">
+                <div class="card mb-3">
+                    <img [src]="post.thumbnail" class="card-img-top" alt="{{ post.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.excerpt }}</p>
+                        <a [routerLink]="['/cameras', post.id]" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
