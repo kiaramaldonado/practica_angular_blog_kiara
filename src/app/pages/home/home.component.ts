@@ -21,10 +21,10 @@ export class HomeComponent implements OnInit {
   filmmakingPosts: Post[] = [];
   currentImageIndex = 0;
 
-  showCameraPosts: boolean = true;
-  showLensPosts: boolean = true;
-  showPhotographyPosts: boolean = true;
-  showFilmmakingPosts: boolean = true;
+  showCameraPosts: boolean = false;
+  showLensPosts: boolean = false;
+  showPhotographyPosts: boolean = false;
+  showFilmmakingPosts: boolean = false;
 
 
   constructor(private postService: PostService) { }
