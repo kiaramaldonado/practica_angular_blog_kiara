@@ -1,0 +1,24 @@
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+.container {
+    padding: 50px;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+button {
+    width: 40%;
+}
+
+.button {
+    text-align: right;
+}

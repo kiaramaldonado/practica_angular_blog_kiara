@@ -19,7 +19,7 @@ export class FormComponent {
     thumbnail: '',
     body: '',
     publishDate: new Date(),
-    author: 'Your Name'
+    author: ''
   };
 
   constructor(private postService: PostService) { }
