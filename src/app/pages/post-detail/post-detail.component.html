@@ -1,18 +1,22 @@
-<div *ngIf="post" class="post-details">
-    <div class="hero" [style.backgroundImage]="'url(' + post.thumbnail + ')'">
+<body>
+    <div class="container">
+        <div *ngIf="post" class="post-details">
+            <div class="hero" [style.backgroundImage]="'url(' + post.thumbnail + ')'">
 
+            </div>
+
+            <div class="author-info">
+                <p class="author-name">A post by {{ post.author }}</p>
+                <p class="post-date">{{ post.publishDate | date:'medium' }}</p>
+            </div>
+
+            <h1 class="post-title">{{ post.title }}</h1>
+            <h2 class="post-excerpt">{{ post.excerpt }}</h2>
+            <div class="post-body" [innerHTML]="post.body"></div>
+
+            <div class="post-actions">
+                <button class="btn btn-danger" (click)="onDeletePost()">Delete</button>
+            </div>
+        </div>
     </div>
-
-    <div class="author-info">
-        <p class="author-name"><i>{{ post.author }}</i></p>
-        <p class="post-date">{{ post.publishDate | date:'medium' }}</p>
-    </div>
-
-    <h1 class="post-title">{{ post.title }}</h1>
-    <h2 class="post-excerpt">{{ post.excerpt }}</h2>
-    <div class="post-body" [innerHTML]="post.body"></div>
-
-    <div class="post-actions">
-        <button class="delete-button" (click)="onDeletePost()">Delete</button>
-    </div>
-</div>
+</body>

@@ -1,0 +1,55 @@
+body {
+    background-color: #333;
+}
+
+.container {
+    width: 100%;
+}
+
+.post-details {
+    max-width: 800px;
+    min-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #e1e1e1;
+}
+
+.hero {
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.author-info {
+    margin-top: 10px;
+}
+
+.post-title {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.post-excerpt {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.post-body {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.post-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.btn {
+    width: 30%;
+}
