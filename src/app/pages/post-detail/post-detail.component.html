@@ -12,7 +12,9 @@
 
             <h1 class="post-title">{{ post.title }}</h1>
             <h2 class="post-excerpt">{{ post.excerpt }}</h2>
-            <div class="post-body" [innerHTML]="post.body"></div>
+            <div class="post-body">
+                <p *ngFor="let paragraph of post.body.split('\n')">{{ paragraph }}</p>
+            </div>
 
             <div class="post-actions">
                 <button class="btn btn-danger" (click)="onDeletePost()">Delete</button>
