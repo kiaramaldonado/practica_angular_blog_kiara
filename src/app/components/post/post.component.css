@@ -3,8 +3,27 @@
 
 }
 
+img {
+    height: 200px;
+    object-fit: cover;
+}
+
 .card-body {
     background-color: rgb(236, 236, 236);
-    min-height: 200px;
-    max-height: 330px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* -------------- MEDIA QUERIES ----------- */
+
+@media only screen and (min-width: 765px) and (max-width: 992px) {
+    .card-body {
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .card-body {
+        height: 180px;
+    }
 }
