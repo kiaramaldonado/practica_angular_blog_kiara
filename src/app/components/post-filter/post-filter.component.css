@@ -1,0 +1,20 @@
+.container {
+    margin-right: 20px;
+}
+
+.post-filter {
+    margin-bottom: 20px;
+    padding: 30px;
+    color: white;
+    width: 100%;
+    text-align: right;
+}
+
+.btn,
+#search {
+    border-radius: 0;
+    padding: 6px 15px;
+    font-size: 14px;
+    max-height: 30px;
+
+}

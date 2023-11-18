@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="post-filter">
+        <select id="sort" [(ngModel)]="sortOrder" (change)="onSortChange()" class="btn btn-warning">
+            <option value="newest">Newest to Oldest</option>
+            <option value="oldest">Oldest to Newest</option>
+        </select>
+
+        <input type="text" id="search" [(ngModel)]="searchTerm" (input)="onSearchInput()" placeholder="🔎">
+
+        <button (click)="clearFilters()" class="btn btn-warning">Refresh</button>
+    </div>
+</div>

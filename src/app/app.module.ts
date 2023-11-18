@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { FormComponent } from './pages/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { PostFilterComponent } from './components/post-filter/post-filter.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterComponent } from './components/footer/footer.component';
     PostComponent,
     PostDetailComponent,
     FormComponent,
-    FooterComponent
+    FooterComponent,
+    PostFilterComponent
   ],
   imports: [
     BrowserModule,
