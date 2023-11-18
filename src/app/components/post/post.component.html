@@ -1,1 +1,8 @@
-<p>post works!</p>
+<div class="card mb-3 d-flex flex-column">
+    <img [src]="post.thumbnail" class="card-img-top flex-grow-1" alt="{{ post.title }}">
+    <div class="card-body d-flex flex-column">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
+        <a [routerLink]="[post.category, post.id]" class="btn btn-warning">Read More</a>
+    </div>
+</div>

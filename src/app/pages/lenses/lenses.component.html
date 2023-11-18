@@ -14,14 +14,7 @@
         <div class="row">
             <!-- Itera sobre los posts de la categoría de objetivos -->
             <div class="col-md-4" *ngFor="let post of lensePosts">
-                <div class="card mb-3">
-                    <img [src]="post.thumbnail" class="card-img-top" alt="{{ post.title }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ post.title }}</h5>
-                        <p class="card-text">{{ post.excerpt }}</p>
-                        <a [routerLink]="['/lenses', post.id]" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
+                <app-post [post]="post"></app-post>
             </div>
         </div>
     </div>
