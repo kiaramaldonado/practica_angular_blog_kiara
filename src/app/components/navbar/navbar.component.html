@@ -1,10 +1,20 @@
 <nav class="navbar">
-    <div class="logo">FLASHCL!CK</div>
+    <div class="logo" routerLink="/home">FLASHCL!CK</div>
     <div class="menu">
+
         <a routerLink="/home">Home</a>
-        <a routerLink="/cameras">Cameras</a>
-        <a routerLink="/lenses">Lenses</a>
-        <a routerLink="/photography">Photography</a>
-        <a routerLink="/filmmaking">Filmmaking</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="dropdown-content">
+                <a routerLink="/cameras">Cameras</a>
+                <a routerLink="/lenses">Lenses</a>
+                <a routerLink="/photography">Photography</a>
+                <a routerLink="/filmmaking">Filmmaking</a>
+            </div>
+        </div>
+
+        <a routerLink="/form">New Post!</a>
+
     </div>
 </nav>

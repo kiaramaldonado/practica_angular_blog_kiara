@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: hwb(0 20% 80%);
+    background-color: hwb(0 12% 88%);
     color: white;
 }
 
@@ -11,6 +11,8 @@
     font-size: 1.5em;
     font-weight: bold;
     margin-right: 30px;
+    color: #ffc107;
+    text-decoration: none;
 }
 
 .menu {
@@ -21,8 +23,53 @@
     margin-right: 30px;
     color: white;
     text-decoration: none;
+    padding: 10px;
 }
 
 .menu a:hover {
     text-decoration: underline;
+}
+
+/* --------DROPDOWN CATEGORIES ----------- */
+
+.dropdown {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.dropbtn {
+    padding: 10px;
+    background-color: hwb(0 12% 88%);
+    color: white;
+    border: none;
+}
+
+.dropbtn:hover {
+    text-decoration: underline;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: hwb(0 20% 80%);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(241, 241, 241);
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+}
+
+.dropdown-content a:hover {
+    background-color: #5c5c5c;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
