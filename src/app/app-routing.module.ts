@@ -5,7 +5,7 @@ import { CamerasComponent } from './pages/cameras/cameras.component';
 import { LensesComponent } from './pages/lenses/lenses.component';
 import { PhotographyComponent } from './pages/photography/photography.component';
 import { FilmmakingComponent } from './pages/filmmaking/filmmaking.component';
-import { PostComponent } from './components/post/post.component';
+import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,10 +14,7 @@ const routes: Routes = [
   { path: 'lenses', component: LensesComponent },
   { path: 'photography', component: PhotographyComponent },
   { path: 'filmmaking', component: FilmmakingComponent },
-  { path: 'cameras/:id', component: PostComponent },
-  { path: 'lenses/:id', component: PostComponent },
-  { path: 'photography/:id', component: PostComponent },
-  { path: 'filmmaking/:id', component: PostComponent },
+  { path: ':category/:postId', component: PostDetailComponent }
 ];
 
 @NgModule({

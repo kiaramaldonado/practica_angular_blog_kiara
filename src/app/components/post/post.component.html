@@ -3,6 +3,7 @@
     <div class="card-body d-flex flex-column">
         <h5 class="card-title">{{ post.title }}</h5>
         <p class="card-text flex-grow-1">{{ post.excerpt }}</p>
-        <a [routerLink]="[post.category, post.id]" class="btn btn-warning">Read More</a>
+        <a href="javascript:void(0)" class="btn btn-warning" (click)="navigateToPostDetail(post.category, post.id)">Read
+            More</a>
     </div>
 </div>

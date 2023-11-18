@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Post } from 'src/app/interfaces/post.model';
 
 
@@ -9,4 +10,10 @@ import { Post } from 'src/app/interfaces/post.model';
 })
 export class PostComponent {
   @Input() post!: Post;
+
+  constructor(private router: Router) { }
+
+  navigateToPostDetail(category: string, postId: number) {
+    this.router.navigate([category, postId]);
+  }
 }

@@ -10,6 +10,8 @@ import { LensesComponent } from './pages/lenses/lenses.component';
 import { PhotographyComponent } from './pages/photography/photography.component';
 import { FilmmakingComponent } from './pages/filmmaking/filmmaking.component';
 import { PostComponent } from './components/post/post.component';
+import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { PostComponent } from './components/post/post.component';
     LensesComponent,
     PhotographyComponent,
     FilmmakingComponent,
-    PostComponent
+    PostComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
