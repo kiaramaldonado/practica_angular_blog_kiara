@@ -11,7 +11,7 @@ import { FormComponent } from './pages/form/form.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'form', component: FormComponent },
+  { path: 'new', component: FormComponent },
   { path: 'cameras', component: CamerasComponent },
   { path: 'lenses', component: LensesComponent },
   { path: 'photography', component: PhotographyComponent },
