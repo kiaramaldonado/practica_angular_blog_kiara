@@ -1,1 +1,23 @@
-<p>filmmaking works!</p>
+<body>
+    <section class="hero"
+        style="background-image: url('https://nt.global.ssl.fastly.net/binaries/content/gallery/website/national/regions/yorkshire/places/brimham-rocks/library/proffessional-photography-at-brimham-rocks.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>FILMMAKING</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <app-post-filter (filterChanged)="onFilterChanged($event)"></app-post-filter>
+
+    <div class="container">
+        <div class="row">
+            <!-- Itera sobre los posts de la categoría de cinematografía -->
+            <div class="col-md-4" *ngFor="let post of filmPosts">
+                <app-post [post]="post"></app-post>
+            </div>
+        </div>
+    </div>
+</body>

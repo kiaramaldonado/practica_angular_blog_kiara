@@ -1,1 +1,23 @@
-<p>photography works!</p>
+<body>
+    <section class="hero"
+        style="background-image: url('https://images.unsplash.com/photo-1624949216539-cd17ef0a1a5a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>PHOTOGRAPHY</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <app-post-filter (filterChanged)="onFilterChanged($event)"></app-post-filter>
+
+    <div class="container">
+        <div class="row">
+            <!-- Itera sobre los posts de la categoría de fotografía -->
+            <div class="col-md-4" *ngFor="let post of photographyPosts">
+                <app-post [post]="post"></app-post>
+            </div>
+        </div>
+    </div>
+</body>
