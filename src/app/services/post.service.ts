@@ -146,4 +146,25 @@ export class PostService {
   getPostById(id: number): Post | undefined {
     return this.posts.find(post => post.id === id);
   }
+
+  addPost(newPost: Post) {
+    this.posts.push(newPost);
+    this.savePostsToLocalstorage();
+  }
+
+  private savePostsToLocalstorage() {
+    localStorage.setItem('posts', JSON.stringify(this.posts));
+  }
+
+  loadPostsFromLocalstorage() {
+    const storedPosts = localStorage.getItem('posts');
+    if (storedPosts) {
+      this.posts = JSON.parse(storedPosts);
+    }
+  }
+
+  getLastPost(): Post | undefined {
+    return this.posts.length > 0 ? this.posts[this.posts.length - 1] : undefined;
+  }
+
 }

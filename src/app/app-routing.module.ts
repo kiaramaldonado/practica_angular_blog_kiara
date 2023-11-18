@@ -6,10 +6,12 @@ import { LensesComponent } from './pages/lenses/lenses.component';
 import { PhotographyComponent } from './pages/photography/photography.component';
 import { FilmmakingComponent } from './pages/filmmaking/filmmaking.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { FormComponent } from './pages/form/form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'form', component: FormComponent },
   { path: 'cameras', component: CamerasComponent },
   { path: 'lenses', component: LensesComponent },
   { path: 'photography', component: PhotographyComponent },

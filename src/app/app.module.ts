@@ -12,6 +12,8 @@ import { FilmmakingComponent } from './pages/filmmaking/filmmaking.component';
 import { PostComponent } from './components/post/post.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
 import { RouterModule } from '@angular/router';
+import { FormComponent } from './pages/form/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { RouterModule } from '@angular/router';
     PhotographyComponent,
     FilmmakingComponent,
     PostComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
