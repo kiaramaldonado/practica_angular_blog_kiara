@@ -1,7 +1,5 @@
-// post-details.component.ts
-
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from 'src/app/interfaces/post.model';
 import { PostService } from 'src/app/services/post.service';
 
@@ -13,12 +11,25 @@ import { PostService } from 'src/app/services/post.service';
 export class PostDetailComponent {
   post: Post | undefined;
 
-  activatedRoute = inject(ActivatedRoute);
-  seriesService = inject(PostService);
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private postService: PostService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      this.post = this.seriesService.getPostById(parseInt(params['postId']));
+      this.post = this.postService.getPostById(parseInt(params['postId']));
     });
+  }
+
+  onDeletePost() {
+    if (confirm('Are you sure you want to delete this post?')) {
+      if (this.post) {
+        const deletedCategory = this.post.category;
+        this.postService.deletePost(this.post.id);
+        this.router.navigate([deletedCategory]);
+      }
+    }
   }
 }

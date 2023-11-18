@@ -130,6 +130,10 @@ export class PostService {
     // Repeat similar blocks for additional posts
   ];
 
+  constructor() {
+    this.loadPostsFromLocalstorage();
+  }
+
   getPosts(): Post[] {
     return this.posts;
   }
@@ -167,4 +171,8 @@ export class PostService {
     return this.posts.length > 0 ? this.posts[this.posts.length - 1] : undefined;
   }
 
+  deletePost(postId: number) {
+    this.posts = this.posts.filter(post => post.id !== postId);
+    this.savePostsToLocalstorage();
+  }
 }
