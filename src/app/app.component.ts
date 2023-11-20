@@ -7,7 +7,7 @@ import { PostService } from './services/post.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'practica_angular_blog_kiaraDEF';
+  title = 'FLASHCL!CK';
 
   constructor(private postService: PostService) {
     this.postService.loadPostsFromLocalstorage();

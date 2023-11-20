@@ -1,8 +1,6 @@
-// form.component.ts
-
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Post } from 'src/app/interfaces/post.model';
+import { Router } from '@angular/router';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -22,19 +20,15 @@ export class FormComponent {
     author: ''
   };
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private router: Router) { }
 
   onSubmit() {
-    // Get the last post's id
     const lastPost = this.postService.getLastPost();
-
-    // Set the new post's id
     this.newPost.id = lastPost ? lastPost.id + 1 : 1;
-
-    // Add the new post to the service
     this.postService.addPost(this.newPost);
 
-    // Clear the form after submission
+    this.router.navigate([this.newPost.category + '/' + this.newPost.id]);
+
     this.newPost = {
       id: 0,
       title: '',
@@ -43,7 +37,8 @@ export class FormComponent {
       thumbnail: '',
       body: '',
       publishDate: new Date(),
-      author: 'Your Name'
+      author: ''
     };
+
   }
 }

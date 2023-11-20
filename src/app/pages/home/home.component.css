@@ -35,6 +35,18 @@
 
 /* ---------- CATEGORIES ---------- */
 
+.checkout {
+    margin-bottom: 20px;
+}
+
+.checkout p {
+    color: #333;
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 800;
+    background-color: #ffc107;
+}
+
 body {
     background-color: #333;
 }
@@ -64,5 +76,5 @@ body {
 
 .col-md-12 h2:hover {
     cursor: pointer;
-    color: rgb(255, 208, 0);
+    color: #ffc107;
 }
